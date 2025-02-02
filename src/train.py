@@ -81,8 +81,8 @@ print(args)
 # Note : this can be removed
 ###################
 
-save_1000tsp = True
 save_1000tsp = False
+save_1000tsp = True
 if save_1000tsp:
     bsz = 1000
     x = torch.rand(bsz, args.nb_nodes, args.dim_input_nodes, device='cpu') 
@@ -465,7 +465,6 @@ class TSP_net(nn.Module):
             
         # logprob_of_choices = sum_t log prob( pi_t | pi_(t-1),...,pi_0 )
         sumLogProbOfActions = torch.stack(sumLogProbOfActions,dim=1).sum(dim=1) # size(sumLogProbOfActions)=(bsz,)
-        print(sumLogProbOfActions)
         # convert the list of nodes into a tensor of shape (bsz,num_cities)
         tours = torch.stack(tours,dim=1) # size(col_index)=(bsz, nb_nodes)
         
@@ -564,7 +563,7 @@ for epoch in range(0,args.nb_epochs):
 
         # compute tours for model
         tour_train, sumLogProbOfActions = model_train(x, deterministic=False) # size(tour_train)=(bsz, nb_nodes), size(sumLogProbOfActions)=(bsz)
-      
+
         # compute tours for baseline
         with torch.no_grad():
             tour_baseline, _ = model_baseline(x, deterministic=True)
@@ -573,6 +572,7 @@ for epoch in range(0,args.nb_epochs):
         
         L_train = compute_tour_length(x, tour_train) # size(L_train)=(bsz)
         L_baseline = compute_tour_length(x, tour_baseline) # size(L_baseline)=(bsz)
+        print(L_train)
         # backprop
         loss = torch.mean( (L_train - L_baseline)* sumLogProbOfActions )
         loss_tmp.append(loss)
