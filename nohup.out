@@ -340,3 +340,4 @@ Epoch: 73, epoch time: 5.330min, tot time: 0.279day, L_train: 3.883, L_base: 3.8
 Epoch: 74, epoch time: 5.336min, tot time: 0.283day, L_train: 3.890, L_base: 3.887, L_test: 3.877, gap_train(%): -100.000, update: False
 Epoch: 75, epoch time: 5.278min, tot time: 0.286day, L_train: 3.883, L_base: 3.882, L_test: 3.877, gap_train(%): -100.000, update: False
 Epoch: 76, epoch time: 5.244min, tot time: 0.290day, L_train: 3.883, L_base: 3.882, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 77, epoch time: 5.307min, tot time: 0.294day, L_train: 3.873, L_base: 3.875, L_test: 3.876, gap_train(%): -100.000, update: True
