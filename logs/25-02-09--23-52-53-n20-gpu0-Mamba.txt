@@ -1,0 +1,97 @@
+25-02-09--23-52-53
+
+nb_nodes=20
+bsz=512
+dim_emb=128
+dim_ff=512
+dim_input_nodes=2
+nb_layers_encoder=6
+nb_layers_decoder=2
+nb_heads=8
+nb_epochs=150
+nb_batch_per_epoch=2500
+nb_batch_eval=5
+gpu_id=0
+lr=0.0001
+tol=0.001
+batchnorm=True
+max_len_PE=1000
+
+
+Epoch: 0, epoch time: 5.508min, tot time: 0.004day, L_train: 4.134, L_base: 6.226, L_test: 4.125, gap_train(%): -100.000, update: True
+Epoch: 1, epoch time: 5.512min, tot time: 0.008day, L_train: 4.004, L_base: 4.138, L_test: 3.999, gap_train(%): -100.000, update: True
+Epoch: 2, epoch time: 5.475min, tot time: 0.011day, L_train: 3.966, L_base: 4.006, L_test: 3.961, gap_train(%): -100.000, update: True
+Epoch: 3, epoch time: 5.418min, tot time: 0.015day, L_train: 3.950, L_base: 3.969, L_test: 3.939, gap_train(%): -100.000, update: True
+Epoch: 4, epoch time: 5.301min, tot time: 0.019day, L_train: 3.941, L_base: 3.949, L_test: 3.935, gap_train(%): -100.000, update: True
+Epoch: 5, epoch time: 5.303min, tot time: 0.023day, L_train: 3.940, L_base: 3.947, L_test: 3.926, gap_train(%): -100.000, update: True
+Epoch: 6, epoch time: 5.303min, tot time: 0.026day, L_train: 3.928, L_base: 3.930, L_test: 3.923, gap_train(%): -100.000, update: True
+Epoch: 7, epoch time: 5.301min, tot time: 0.030day, L_train: 3.918, L_base: 3.920, L_test: 3.921, gap_train(%): -100.000, update: True
+Epoch: 8, epoch time: 5.336min, tot time: 0.034day, L_train: 3.913, L_base: 3.918, L_test: 3.917, gap_train(%): -100.000, update: True
+Epoch: 9, epoch time: 5.475min, tot time: 0.037day, L_train: 3.920, L_base: 3.923, L_test: 3.917, gap_train(%): -100.000, update: True
+Epoch: 10, epoch time: 5.473min, tot time: 0.041day, L_train: 3.911, L_base: 3.912, L_test: 3.919, gap_train(%): -100.000, update: True
+Epoch: 11, epoch time: 5.416min, tot time: 0.045day, L_train: 3.918, L_base: 3.919, L_test: 3.914, gap_train(%): -100.000, update: True
+Epoch: 12, epoch time: 5.464min, tot time: 0.049day, L_train: 3.917, L_base: 3.919, L_test: 3.911, gap_train(%): -100.000, update: True
+Epoch: 13, epoch time: 5.506min, tot time: 0.053day, L_train: 3.911, L_base: 3.915, L_test: 3.910, gap_train(%): -100.000, update: True
+Epoch: 14, epoch time: 5.461min, tot time: 0.056day, L_train: 3.910, L_base: 3.909, L_test: 3.910, gap_train(%): -100.000, update: False
+Epoch: 15, epoch time: 5.460min, tot time: 0.060day, L_train: 3.915, L_base: 3.915, L_test: 3.910, gap_train(%): -100.000, update: False
+Epoch: 16, epoch time: 5.505min, tot time: 0.064day, L_train: 3.900, L_base: 3.900, L_test: 3.910, gap_train(%): -100.000, update: False
+Epoch: 17, epoch time: 5.526min, tot time: 0.068day, L_train: 3.898, L_base: 3.900, L_test: 3.907, gap_train(%): -100.000, update: True
+Epoch: 18, epoch time: 5.520min, tot time: 0.072day, L_train: 3.904, L_base: 3.906, L_test: 3.904, gap_train(%): -100.000, update: True
+Epoch: 19, epoch time: 5.508min, tot time: 0.076day, L_train: 3.903, L_base: 3.904, L_test: 3.903, gap_train(%): -100.000, update: True
+Epoch: 20, epoch time: 5.476min, tot time: 0.079day, L_train: 3.896, L_base: 3.898, L_test: 3.903, gap_train(%): -100.000, update: True
+Epoch: 21, epoch time: 5.475min, tot time: 0.083day, L_train: 3.901, L_base: 3.900, L_test: 3.903, gap_train(%): -100.000, update: False
+Epoch: 22, epoch time: 5.476min, tot time: 0.087day, L_train: 3.900, L_base: 3.900, L_test: 3.903, gap_train(%): -100.000, update: False
+Epoch: 23, epoch time: 5.478min, tot time: 0.091day, L_train: 3.891, L_base: 3.896, L_test: 3.899, gap_train(%): -100.000, update: True
+Epoch: 24, epoch time: 5.476min, tot time: 0.095day, L_train: 3.897, L_base: 3.897, L_test: 3.899, gap_train(%): -100.000, update: False
+Epoch: 25, epoch time: 5.470min, tot time: 0.098day, L_train: 3.890, L_base: 3.891, L_test: 3.899, gap_train(%): -100.000, update: False
+Epoch: 26, epoch time: 5.472min, tot time: 0.102day, L_train: 3.896, L_base: 3.897, L_test: 3.899, gap_train(%): -100.000, update: False
+Epoch: 27, epoch time: 5.456min, tot time: 0.106day, L_train: 3.900, L_base: 3.902, L_test: 3.898, gap_train(%): -100.000, update: True
+Epoch: 28, epoch time: 5.424min, tot time: 0.110day, L_train: 3.891, L_base: 3.890, L_test: 3.898, gap_train(%): -100.000, update: False
+Epoch: 29, epoch time: 5.407min, tot time: 0.114day, L_train: 3.902, L_base: 3.902, L_test: 3.898, gap_train(%): -100.000, update: False
+Epoch: 30, epoch time: 5.405min, tot time: 0.117day, L_train: 3.879, L_base: 3.882, L_test: 3.892, gap_train(%): -100.000, update: True
+Epoch: 31, epoch time: 5.402min, tot time: 0.121day, L_train: 3.889, L_base: 3.889, L_test: 3.892, gap_train(%): -100.000, update: False
+Epoch: 32, epoch time: 5.402min, tot time: 0.125day, L_train: 3.899, L_base: 3.900, L_test: 3.892, gap_train(%): -100.000, update: False
+Epoch: 33, epoch time: 5.446min, tot time: 0.129day, L_train: 3.890, L_base: 3.891, L_test: 3.892, gap_train(%): -100.000, update: False
+Epoch: 34, epoch time: 5.426min, tot time: 0.132day, L_train: 3.889, L_base: 3.888, L_test: 3.892, gap_train(%): -100.000, update: False
+Epoch: 35, epoch time: 5.401min, tot time: 0.136day, L_train: 3.882, L_base: 3.884, L_test: 3.889, gap_train(%): -100.000, update: True
+Epoch: 36, epoch time: 5.404min, tot time: 0.140day, L_train: 3.884, L_base: 3.885, L_test: 3.889, gap_train(%): -100.000, update: False
+Epoch: 37, epoch time: 5.404min, tot time: 0.144day, L_train: 3.898, L_base: 3.898, L_test: 3.889, gap_train(%): -100.000, update: False
+Epoch: 38, epoch time: 5.404min, tot time: 0.147day, L_train: 3.896, L_base: 3.896, L_test: 3.889, gap_train(%): -100.000, update: False
+Epoch: 39, epoch time: 5.407min, tot time: 0.151day, L_train: 3.892, L_base: 3.894, L_test: 3.887, gap_train(%): -100.000, update: True
+Epoch: 40, epoch time: 5.422min, tot time: 0.155day, L_train: 3.891, L_base: 3.890, L_test: 3.887, gap_train(%): -100.000, update: False
+Epoch: 41, epoch time: 5.421min, tot time: 0.159day, L_train: 3.896, L_base: 3.898, L_test: 3.886, gap_train(%): -100.000, update: True
+Epoch: 42, epoch time: 5.422min, tot time: 0.163day, L_train: 3.888, L_base: 3.888, L_test: 3.886, gap_train(%): -100.000, update: False
+Epoch: 43, epoch time: 5.416min, tot time: 0.166day, L_train: 3.885, L_base: 3.886, L_test: 3.886, gap_train(%): -100.000, update: True
+Epoch: 44, epoch time: 5.502min, tot time: 0.170day, L_train: 3.891, L_base: 3.893, L_test: 3.887, gap_train(%): -100.000, update: True
+Epoch: 45, epoch time: 5.490min, tot time: 0.174day, L_train: 3.887, L_base: 3.887, L_test: 3.887, gap_train(%): -100.000, update: False
+Epoch: 46, epoch time: 5.495min, tot time: 0.178day, L_train: 3.893, L_base: 3.888, L_test: 3.887, gap_train(%): -100.000, update: False
+Epoch: 47, epoch time: 5.446min, tot time: 0.182day, L_train: 3.887, L_base: 3.892, L_test: 3.882, gap_train(%): -100.000, update: True
+Epoch: 48, epoch time: 5.415min, tot time: 0.185day, L_train: 3.874, L_base: 3.873, L_test: 3.882, gap_train(%): -100.000, update: False
+Epoch: 49, epoch time: 5.412min, tot time: 0.189day, L_train: 3.881, L_base: 3.882, L_test: 3.884, gap_train(%): -100.000, update: True
+Epoch: 50, epoch time: 5.405min, tot time: 0.193day, L_train: 3.878, L_base: 3.879, L_test: 3.882, gap_train(%): -100.000, update: True
+Epoch: 51, epoch time: 5.401min, tot time: 0.197day, L_train: 3.890, L_base: 3.889, L_test: 3.882, gap_train(%): -100.000, update: False
+Epoch: 52, epoch time: 5.368min, tot time: 0.200day, L_train: 3.881, L_base: 3.881, L_test: 3.882, gap_train(%): -100.000, update: False
+Epoch: 53, epoch time: 5.333min, tot time: 0.204day, L_train: 3.891, L_base: 3.891, L_test: 3.882, gap_train(%): -100.000, update: False
+Epoch: 54, epoch time: 5.325min, tot time: 0.208day, L_train: 3.879, L_base: 3.883, L_test: 3.880, gap_train(%): -100.000, update: True
+Epoch: 55, epoch time: 5.365min, tot time: 0.211day, L_train: 3.887, L_base: 3.886, L_test: 3.880, gap_train(%): -100.000, update: False
+Epoch: 56, epoch time: 5.363min, tot time: 0.215day, L_train: 3.885, L_base: 3.886, L_test: 3.880, gap_train(%): -100.000, update: False
+Epoch: 57, epoch time: 5.451min, tot time: 0.219day, L_train: 3.882, L_base: 3.883, L_test: 3.880, gap_train(%): -100.000, update: False
+Epoch: 58, epoch time: 5.429min, tot time: 0.223day, L_train: 3.879, L_base: 3.882, L_test: 3.881, gap_train(%): -100.000, update: True
+Epoch: 59, epoch time: 5.456min, tot time: 0.227day, L_train: 3.879, L_base: 3.881, L_test: 3.881, gap_train(%): -100.000, update: True
+Epoch: 60, epoch time: 5.378min, tot time: 0.230day, L_train: 3.886, L_base: 3.885, L_test: 3.881, gap_train(%): -100.000, update: False
+Epoch: 61, epoch time: 5.341min, tot time: 0.234day, L_train: 3.867, L_base: 3.870, L_test: 3.878, gap_train(%): -100.000, update: True
+Epoch: 62, epoch time: 5.341min, tot time: 0.238day, L_train: 3.880, L_base: 3.879, L_test: 3.878, gap_train(%): -100.000, update: False
+Epoch: 63, epoch time: 5.392min, tot time: 0.241day, L_train: 3.880, L_base: 3.880, L_test: 3.878, gap_train(%): -100.000, update: False
+Epoch: 64, epoch time: 5.458min, tot time: 0.245day, L_train: 3.871, L_base: 3.870, L_test: 3.878, gap_train(%): -100.000, update: False
+Epoch: 65, epoch time: 5.457min, tot time: 0.249day, L_train: 3.880, L_base: 3.882, L_test: 3.877, gap_train(%): -100.000, update: True
+Epoch: 66, epoch time: 5.356min, tot time: 0.253day, L_train: 3.886, L_base: 3.884, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 67, epoch time: 5.435min, tot time: 0.257day, L_train: 3.879, L_base: 3.880, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 68, epoch time: 5.457min, tot time: 0.260day, L_train: 3.872, L_base: 3.872, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 69, epoch time: 5.392min, tot time: 0.264day, L_train: 3.871, L_base: 3.872, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 70, epoch time: 5.231min, tot time: 0.268day, L_train: 3.879, L_base: 3.880, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 71, epoch time: 5.338min, tot time: 0.271day, L_train: 3.889, L_base: 3.887, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 72, epoch time: 5.282min, tot time: 0.275day, L_train: 3.866, L_base: 3.868, L_test: 3.877, gap_train(%): -100.000, update: True
+Epoch: 73, epoch time: 5.330min, tot time: 0.279day, L_train: 3.883, L_base: 3.884, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 74, epoch time: 5.336min, tot time: 0.283day, L_train: 3.890, L_base: 3.887, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 75, epoch time: 5.278min, tot time: 0.286day, L_train: 3.883, L_base: 3.882, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 76, epoch time: 5.244min, tot time: 0.290day, L_train: 3.883, L_base: 3.882, L_test: 3.877, gap_train(%): -100.000, update: False

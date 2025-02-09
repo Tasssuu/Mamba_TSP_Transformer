@@ -57,7 +57,7 @@ args.dim_input_nodes = 2
 args.nb_layers_encoder = 6
 args.nb_layers_decoder = 2
 args.nb_heads = 8
-args.nb_epochs = 10000
+args.nb_epochs = 150
 args.nb_batch_per_epoch = 2500
 args.nb_batch_eval = 5
 args.gpu_id = gpu_id
@@ -74,7 +74,6 @@ print(args)
 ###################
 
 save_1000tsp = True
-save_1000tsp = False
 if save_1000tsp:
     bsz = 1000
     x = torch.rand(bsz, args.nb_nodes, args.dim_input_nodes, device='cpu') 
@@ -468,6 +467,7 @@ model_baseline = model_baseline.to(device)
 model_baseline.eval()
 
 print(args,flush = True); print('')
+
 
 # Logs
 os.system("mkdir logs")

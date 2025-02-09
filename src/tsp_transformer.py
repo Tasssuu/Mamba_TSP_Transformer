@@ -53,8 +53,8 @@ class DotDict(dict):
         self.__dict__ = self
         
 args = DotDict()
-args.nb_nodes = 20 # TSP20
-#args.nb_nodes = 50 # TSP50
+#args.nb_nodes = 20 # TSP20
+args.nb_nodes = 50 # TSP50
 #args.nb_nodes = 100 # TSP100
 args.bsz = 512 # TSP20 TSP50
 args.dim_emb = 128
@@ -509,7 +509,7 @@ print(args,flush = True); print('')
 # Logs
 os.system("mkdir logs")
 time_stamp=datetime.datetime.now().strftime("%y-%m-%d--%H-%M-%S")
-file_name = 'logs'+'/'+time_stamp + "-n{}".format(args.nb_nodes) + "-gpu{}".format(args.gpu_id) + ".txt"
+file_name = 'logs'+'/'+time_stamp + "-n{}".format(args.nb_nodes) + "-gpu{}".format(args.gpu_id) + "-transformer.txt"
 file = open(file_name,"w",1) 
 file.write(time_stamp+'\n\n') 
 for arg in vars(args):

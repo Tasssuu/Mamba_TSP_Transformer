@@ -49,22 +49,10 @@ class Encoder_Block(MambaModule):
         
         # Forward Mamba
         x_norm = self.norm1(x)
-        mamba_out_forward = self.mamba(x_norm)
-
-        # Backward Mamba
-        x_flip = torch.flip(x_norm, dims=[1])  # Flip Sequence
-        mamba_out_backward = self.mamba(x_flip)
-        mamba_out_backward = torch.flip(mamba_out_backward, dims=[1])  # Flip back
-
-        # Combining forward and backward
-        mamba_out = mamba_out_forward + mamba_out_backward
-        
+        mamba_out = self.mamba(x_norm)
         mamba_out = self.norm2(mamba_out)
-        ff_out = self.feed_forward(mamba_out)
 
-        output = ff_out + residual 
-
-        output = self.head(output)
+        output = self.head(mamba_out)
         return output
 
 

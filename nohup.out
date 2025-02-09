@@ -1,0 +1,342 @@
+GPU name: NVIDIA GeForce RTX 3090, gpu_id: 0
+cuda
+{'nb_nodes': 50, 'bsz': 512, 'dim_emb': 128, 'dim_ff': 512, 'dim_input_nodes': 2, 'nb_layers_encoder': 6, 'nb_layers_decoder': 2, 'nb_heads': 8, 'nb_epochs': 150, 'nb_batch_per_epoch': 2500, 'nb_batch_eval': 5, 'gpu_id': '0', 'lr': 0.0001, 'tol': 0.001, 'batchnorm': True, 'max_len_PE': 1000}
+torch.Size([1000, 50, 2]) tensor([[0.5991, 0.5299],
+        [0.0545, 0.5542],
+        [0.1536, 0.6206],
+        [0.6587, 0.9161],
+        [0.3302, 0.4263],
+        [0.0067, 0.9772],
+        [0.3096, 0.0073],
+        [0.2223, 0.6918],
+        [0.2665, 0.9445],
+        [0.7945, 0.6042],
+        [0.1123, 0.7335],
+        [0.1146, 0.5198],
+        [0.8962, 0.5364],
+        [0.6221, 0.0196],
+        [0.6838, 0.0932],
+        [0.1862, 0.7075],
+        [0.7588, 0.1556],
+        [0.0207, 0.9427],
+        [0.0789, 0.0625],
+        [0.9119, 0.2336],
+        [0.9530, 0.0519],
+        [0.6588, 0.7726],
+        [0.5505, 0.3251],
+        [0.1185, 0.1550],
+        [0.5176, 0.9263],
+        [0.5188, 0.3798],
+        [0.3821, 0.8052],
+        [0.1350, 0.7640],
+        [0.4658, 0.7299],
+        [0.9095, 0.7951],
+        [0.5268, 0.2137],
+        [0.7998, 0.2681],
+        [0.6599, 0.2684],
+        [0.9615, 0.8710],
+        [0.2697, 0.0117],
+        [0.8415, 0.6573],
+        [0.8014, 0.1972],
+        [0.2945, 0.6147],
+        [0.3019, 0.0829],
+        [0.9454, 0.1432],
+        [0.6187, 0.2168],
+        [0.9402, 0.1029],
+        [0.1758, 0.4525],
+        [0.0046, 0.4337],
+        [0.4038, 0.8552],
+        [0.6217, 0.2882],
+        [0.7602, 0.2655],
+        [0.3210, 0.6849],
+        [0.3339, 0.7120],
+        [0.3366, 0.8859]])
+nb of nodes : 50
+1
+{'nb_nodes': 50, 'bsz': 512, 'dim_emb': 128, 'dim_ff': 512, 'dim_input_nodes': 2, 'nb_layers_encoder': 6, 'nb_layers_decoder': 2, 'nb_heads': 8, 'nb_epochs': 150, 'nb_batch_per_epoch': 2500, 'nb_batch_eval': 5, 'gpu_id': '0', 'lr': 0.0001, 'tol': 0.001, 'batchnorm': True, 'max_len_PE': 1000}
+mkdir: ディレクトリ `logs' を作成できません: ファイルが存在します
+
+Traceback (most recent call last):
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/src/train.py", line 528, in <module>
+    tour_train, sumLogProbOfActions = model_train(x, deterministic=False) # size(tour_train)=(bsz, nb_nodes), size(sumLogProbOfActions)=(bsz)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/src/train.py", line 358, in forward
+    h_encoder = self.encoder(h) # size(h)=(bsz, nb_nodes+1, dim_emb)
+                ^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/src/mamba_encoder.py", line 70, in forward
+    enc_out = self.encoder(tokens)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/src/mamba_encoder.py", line 55, in forward
+    output = self.head(output)
+                       ^^^^^^
+UnboundLocalError: cannot access local variable 'output' where it is not associated with a value
+GPU name: NVIDIA GeForce RTX 3090, gpu_id: 0
+cuda
+{'nb_nodes': 50, 'bsz': 512, 'dim_emb': 128, 'dim_ff': 512, 'dim_input_nodes': 2, 'nb_layers_encoder': 6, 'nb_layers_decoder': 2, 'nb_heads': 8, 'nb_epochs': 150, 'nb_batch_per_epoch': 2500, 'nb_batch_eval': 5, 'gpu_id': '0', 'lr': 0.0001, 'tol': 0.001, 'batchnorm': True, 'max_len_PE': 1000}
+torch.Size([1000, 50, 2]) tensor([[0.7245, 0.1506],
+        [0.9554, 0.4194],
+        [0.8078, 0.7223],
+        [0.5814, 0.5120],
+        [0.9483, 0.8928],
+        [0.2977, 0.0798],
+        [0.6679, 0.8123],
+        [0.3198, 0.0460],
+        [0.2661, 0.5787],
+        [0.8830, 0.4233],
+        [0.1399, 0.4911],
+        [0.5252, 0.1601],
+        [0.4537, 0.4466],
+        [0.2539, 0.3712],
+        [0.7441, 0.5918],
+        [0.3268, 0.1757],
+        [0.7806, 0.9621],
+        [0.4194, 0.3927],
+        [0.0238, 0.6990],
+        [0.1248, 0.0497],
+        [0.1742, 0.1903],
+        [0.1750, 0.6595],
+        [0.1839, 0.4662],
+        [0.3387, 0.9023],
+        [0.8053, 0.3282],
+        [0.9677, 0.5743],
+        [0.9822, 0.7304],
+        [0.3592, 0.3506],
+        [0.5166, 0.4245],
+        [0.7502, 0.1072],
+        [0.6324, 0.5663],
+        [0.8045, 0.8110],
+        [0.6623, 0.8403],
+        [0.5527, 0.1839],
+        [0.1533, 0.9798],
+        [0.3006, 0.9077],
+        [0.7313, 0.2903],
+        [0.2645, 0.3594],
+        [0.2271, 0.9704],
+        [0.3712, 0.0869],
+        [0.2896, 0.6387],
+        [0.4336, 0.8102],
+        [0.5666, 0.2443],
+        [0.6594, 0.2360],
+        [0.0510, 0.1626],
+        [0.7775, 0.7426],
+        [0.7050, 0.0416],
+        [0.0155, 0.4440],
+        [0.9222, 0.9933],
+        [0.4182, 0.9986]])
+nb of nodes : 50
+1
+{'nb_nodes': 50, 'bsz': 512, 'dim_emb': 128, 'dim_ff': 512, 'dim_input_nodes': 2, 'nb_layers_encoder': 6, 'nb_layers_decoder': 2, 'nb_heads': 8, 'nb_epochs': 150, 'nb_batch_per_epoch': 2500, 'nb_batch_eval': 5, 'gpu_id': '0', 'lr': 0.0001, 'tol': 0.001, 'batchnorm': True, 'max_len_PE': 1000}
+mkdir: ディレクトリ `logs' を作成できません: ファイルが存在します
+
+Traceback (most recent call last):
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/src/train.py", line 529, in <module>
+    tour_train, sumLogProbOfActions = model_train(x, deterministic=False) # size(tour_train)=(bsz, nb_nodes), size(sumLogProbOfActions)=(bsz)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/src/train.py", line 358, in forward
+    h_encoder = self.encoder(h) # size(h)=(bsz, nb_nodes+1, dim_emb)
+                ^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/src/mamba_encoder.py", line 70, in forward
+    enc_out = self.encoder(tokens)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tmp/morish4t/Mamba_TSP_Transformer/src/mamba_encoder.py", line 55, in forward
+    output = self.head(output)
+                       ^^^^^^
+UnboundLocalError: cannot access local variable 'output' where it is not associated with a value
+GPU name: NVIDIA GeForce RTX 3090, gpu_id: 0
+cuda
+{'nb_nodes': 50, 'bsz': 512, 'dim_emb': 128, 'dim_ff': 512, 'dim_input_nodes': 2, 'nb_layers_encoder': 6, 'nb_layers_decoder': 2, 'nb_heads': 8, 'nb_epochs': 150, 'nb_batch_per_epoch': 2500, 'nb_batch_eval': 5, 'gpu_id': '0', 'lr': 0.0001, 'tol': 0.001, 'batchnorm': True, 'max_len_PE': 1000}
+torch.Size([1000, 50, 2]) tensor([[0.2169, 0.7486],
+        [0.7309, 0.5172],
+        [0.2229, 0.6740],
+        [0.7687, 0.8317],
+        [0.3066, 0.4627],
+        [0.7472, 0.5053],
+        [0.0281, 0.3034],
+        [0.4761, 0.5082],
+        [0.3569, 0.4546],
+        [0.2238, 0.4071],
+        [0.2852, 0.6567],
+        [0.7054, 0.5321],
+        [0.2568, 0.8275],
+        [0.6476, 0.5391],
+        [0.1493, 0.8653],
+        [0.9786, 0.4805],
+        [0.3115, 0.7857],
+        [0.1283, 0.7046],
+        [0.1100, 0.2761],
+        [0.8005, 0.7077],
+        [0.5351, 0.2214],
+        [0.4051, 0.2239],
+        [0.8090, 0.7529],
+        [0.2075, 0.7610],
+        [0.2100, 0.6459],
+        [0.8215, 0.3752],
+        [0.1654, 0.2599],
+        [0.8185, 0.9709],
+        [0.7238, 0.9180],
+        [0.4532, 0.7705],
+        [0.6831, 0.4512],
+        [0.4963, 0.4405],
+        [0.1193, 0.9664],
+        [0.6769, 0.9920],
+        [0.2510, 0.1499],
+        [0.0434, 0.0307],
+        [0.1322, 0.7929],
+        [0.8466, 0.4105],
+        [0.8656, 0.8749],
+        [0.2915, 0.5278],
+        [0.6904, 0.7500],
+        [0.4777, 0.1786],
+        [0.7834, 0.9141],
+        [0.3147, 0.6050],
+        [0.8660, 0.3237],
+        [0.6519, 0.5230],
+        [0.7418, 0.3685],
+        [0.9967, 0.4401],
+        [0.9834, 0.8844],
+        [0.8389, 0.2128]])
+nb of nodes : 50
+1
+{'nb_nodes': 50, 'bsz': 512, 'dim_emb': 128, 'dim_ff': 512, 'dim_input_nodes': 2, 'nb_layers_encoder': 6, 'nb_layers_decoder': 2, 'nb_heads': 8, 'nb_epochs': 150, 'nb_batch_per_epoch': 2500, 'nb_batch_eval': 5, 'gpu_id': '0', 'lr': 0.0001, 'tol': 0.001, 'batchnorm': True, 'max_len_PE': 1000}
+mkdir: ディレクトリ `logs' を作成できません: ファイルが存在します
+GPU name: NVIDIA GeForce RTX 3090, gpu_id: 0
+cuda
+{'nb_nodes': 20, 'bsz': 512, 'dim_emb': 128, 'dim_ff': 512, 'dim_input_nodes': 2, 'nb_layers_encoder': 6, 'nb_layers_decoder': 2, 'nb_heads': 8, 'nb_epochs': 150, 'nb_batch_per_epoch': 2500, 'nb_batch_eval': 5, 'gpu_id': '0', 'lr': 0.0001, 'tol': 0.001, 'batchnorm': True, 'max_len_PE': 1000}
+torch.Size([1000, 20, 2]) tensor([[0.5575, 0.4238],
+        [0.5457, 0.3662],
+        [0.9414, 0.4847],
+        [0.2316, 0.8898],
+        [0.9119, 0.5359],
+        [0.1443, 0.2008],
+        [0.6239, 0.3491],
+        [0.5216, 0.1084],
+        [0.5238, 0.6686],
+        [0.8355, 0.6332],
+        [0.7053, 0.8905],
+        [0.3444, 0.6473],
+        [0.8427, 0.7138],
+        [0.0835, 0.2417],
+        [0.0962, 0.9081],
+        [0.1621, 0.6613],
+        [0.3580, 0.7214],
+        [0.9518, 0.4825],
+        [0.6622, 0.4355],
+        [0.2748, 0.3852]])
+nb of nodes : 20
+1
+{'nb_nodes': 20, 'bsz': 512, 'dim_emb': 128, 'dim_ff': 512, 'dim_input_nodes': 2, 'nb_layers_encoder': 6, 'nb_layers_decoder': 2, 'nb_heads': 8, 'nb_epochs': 150, 'nb_batch_per_epoch': 2500, 'nb_batch_eval': 5, 'gpu_id': '0', 'lr': 0.0001, 'tol': 0.001, 'batchnorm': True, 'max_len_PE': 1000}
+mkdir: ディレクトリ `logs' を作成できません: ファイルが存在します
+
+Epoch: 0, epoch time: 5.508min, tot time: 0.004day, L_train: 4.134, L_base: 6.226, L_test: 4.125, gap_train(%): -100.000, update: True
+Epoch: 1, epoch time: 5.512min, tot time: 0.008day, L_train: 4.004, L_base: 4.138, L_test: 3.999, gap_train(%): -100.000, update: True
+Epoch: 2, epoch time: 5.475min, tot time: 0.011day, L_train: 3.966, L_base: 4.006, L_test: 3.961, gap_train(%): -100.000, update: True
+Epoch: 3, epoch time: 5.418min, tot time: 0.015day, L_train: 3.950, L_base: 3.969, L_test: 3.939, gap_train(%): -100.000, update: True
+Epoch: 4, epoch time: 5.301min, tot time: 0.019day, L_train: 3.941, L_base: 3.949, L_test: 3.935, gap_train(%): -100.000, update: True
+Epoch: 5, epoch time: 5.303min, tot time: 0.023day, L_train: 3.940, L_base: 3.947, L_test: 3.926, gap_train(%): -100.000, update: True
+Epoch: 6, epoch time: 5.303min, tot time: 0.026day, L_train: 3.928, L_base: 3.930, L_test: 3.923, gap_train(%): -100.000, update: True
+Epoch: 7, epoch time: 5.301min, tot time: 0.030day, L_train: 3.918, L_base: 3.920, L_test: 3.921, gap_train(%): -100.000, update: True
+Epoch: 8, epoch time: 5.336min, tot time: 0.034day, L_train: 3.913, L_base: 3.918, L_test: 3.917, gap_train(%): -100.000, update: True
+Epoch: 9, epoch time: 5.475min, tot time: 0.037day, L_train: 3.920, L_base: 3.923, L_test: 3.917, gap_train(%): -100.000, update: True
+Epoch: 10, epoch time: 5.473min, tot time: 0.041day, L_train: 3.911, L_base: 3.912, L_test: 3.919, gap_train(%): -100.000, update: True
+Epoch: 11, epoch time: 5.416min, tot time: 0.045day, L_train: 3.918, L_base: 3.919, L_test: 3.914, gap_train(%): -100.000, update: True
+Epoch: 12, epoch time: 5.464min, tot time: 0.049day, L_train: 3.917, L_base: 3.919, L_test: 3.911, gap_train(%): -100.000, update: True
+Epoch: 13, epoch time: 5.506min, tot time: 0.053day, L_train: 3.911, L_base: 3.915, L_test: 3.910, gap_train(%): -100.000, update: True
+Epoch: 14, epoch time: 5.461min, tot time: 0.056day, L_train: 3.910, L_base: 3.909, L_test: 3.910, gap_train(%): -100.000, update: False
+Epoch: 15, epoch time: 5.460min, tot time: 0.060day, L_train: 3.915, L_base: 3.915, L_test: 3.910, gap_train(%): -100.000, update: False
+Epoch: 16, epoch time: 5.505min, tot time: 0.064day, L_train: 3.900, L_base: 3.900, L_test: 3.910, gap_train(%): -100.000, update: False
+Epoch: 17, epoch time: 5.526min, tot time: 0.068day, L_train: 3.898, L_base: 3.900, L_test: 3.907, gap_train(%): -100.000, update: True
+Epoch: 18, epoch time: 5.520min, tot time: 0.072day, L_train: 3.904, L_base: 3.906, L_test: 3.904, gap_train(%): -100.000, update: True
+Epoch: 19, epoch time: 5.508min, tot time: 0.076day, L_train: 3.903, L_base: 3.904, L_test: 3.903, gap_train(%): -100.000, update: True
+Epoch: 20, epoch time: 5.476min, tot time: 0.079day, L_train: 3.896, L_base: 3.898, L_test: 3.903, gap_train(%): -100.000, update: True
+Epoch: 21, epoch time: 5.475min, tot time: 0.083day, L_train: 3.901, L_base: 3.900, L_test: 3.903, gap_train(%): -100.000, update: False
+Epoch: 22, epoch time: 5.476min, tot time: 0.087day, L_train: 3.900, L_base: 3.900, L_test: 3.903, gap_train(%): -100.000, update: False
+Epoch: 23, epoch time: 5.478min, tot time: 0.091day, L_train: 3.891, L_base: 3.896, L_test: 3.899, gap_train(%): -100.000, update: True
+Epoch: 24, epoch time: 5.476min, tot time: 0.095day, L_train: 3.897, L_base: 3.897, L_test: 3.899, gap_train(%): -100.000, update: False
+Epoch: 25, epoch time: 5.470min, tot time: 0.098day, L_train: 3.890, L_base: 3.891, L_test: 3.899, gap_train(%): -100.000, update: False
+Epoch: 26, epoch time: 5.472min, tot time: 0.102day, L_train: 3.896, L_base: 3.897, L_test: 3.899, gap_train(%): -100.000, update: False
+Epoch: 27, epoch time: 5.456min, tot time: 0.106day, L_train: 3.900, L_base: 3.902, L_test: 3.898, gap_train(%): -100.000, update: True
+Epoch: 28, epoch time: 5.424min, tot time: 0.110day, L_train: 3.891, L_base: 3.890, L_test: 3.898, gap_train(%): -100.000, update: False
+Epoch: 29, epoch time: 5.407min, tot time: 0.114day, L_train: 3.902, L_base: 3.902, L_test: 3.898, gap_train(%): -100.000, update: False
+Epoch: 30, epoch time: 5.405min, tot time: 0.117day, L_train: 3.879, L_base: 3.882, L_test: 3.892, gap_train(%): -100.000, update: True
+Epoch: 31, epoch time: 5.402min, tot time: 0.121day, L_train: 3.889, L_base: 3.889, L_test: 3.892, gap_train(%): -100.000, update: False
+Epoch: 32, epoch time: 5.402min, tot time: 0.125day, L_train: 3.899, L_base: 3.900, L_test: 3.892, gap_train(%): -100.000, update: False
+Epoch: 33, epoch time: 5.446min, tot time: 0.129day, L_train: 3.890, L_base: 3.891, L_test: 3.892, gap_train(%): -100.000, update: False
+Epoch: 34, epoch time: 5.426min, tot time: 0.132day, L_train: 3.889, L_base: 3.888, L_test: 3.892, gap_train(%): -100.000, update: False
+Epoch: 35, epoch time: 5.401min, tot time: 0.136day, L_train: 3.882, L_base: 3.884, L_test: 3.889, gap_train(%): -100.000, update: True
+Epoch: 36, epoch time: 5.404min, tot time: 0.140day, L_train: 3.884, L_base: 3.885, L_test: 3.889, gap_train(%): -100.000, update: False
+Epoch: 37, epoch time: 5.404min, tot time: 0.144day, L_train: 3.898, L_base: 3.898, L_test: 3.889, gap_train(%): -100.000, update: False
+Epoch: 38, epoch time: 5.404min, tot time: 0.147day, L_train: 3.896, L_base: 3.896, L_test: 3.889, gap_train(%): -100.000, update: False
+Epoch: 39, epoch time: 5.407min, tot time: 0.151day, L_train: 3.892, L_base: 3.894, L_test: 3.887, gap_train(%): -100.000, update: True
+Epoch: 40, epoch time: 5.422min, tot time: 0.155day, L_train: 3.891, L_base: 3.890, L_test: 3.887, gap_train(%): -100.000, update: False
+Epoch: 41, epoch time: 5.421min, tot time: 0.159day, L_train: 3.896, L_base: 3.898, L_test: 3.886, gap_train(%): -100.000, update: True
+Epoch: 42, epoch time: 5.422min, tot time: 0.163day, L_train: 3.888, L_base: 3.888, L_test: 3.886, gap_train(%): -100.000, update: False
+Epoch: 43, epoch time: 5.416min, tot time: 0.166day, L_train: 3.885, L_base: 3.886, L_test: 3.886, gap_train(%): -100.000, update: True
+Epoch: 44, epoch time: 5.502min, tot time: 0.170day, L_train: 3.891, L_base: 3.893, L_test: 3.887, gap_train(%): -100.000, update: True
+Epoch: 45, epoch time: 5.490min, tot time: 0.174day, L_train: 3.887, L_base: 3.887, L_test: 3.887, gap_train(%): -100.000, update: False
+Epoch: 46, epoch time: 5.495min, tot time: 0.178day, L_train: 3.893, L_base: 3.888, L_test: 3.887, gap_train(%): -100.000, update: False
+Epoch: 47, epoch time: 5.446min, tot time: 0.182day, L_train: 3.887, L_base: 3.892, L_test: 3.882, gap_train(%): -100.000, update: True
+Epoch: 48, epoch time: 5.415min, tot time: 0.185day, L_train: 3.874, L_base: 3.873, L_test: 3.882, gap_train(%): -100.000, update: False
+Epoch: 49, epoch time: 5.412min, tot time: 0.189day, L_train: 3.881, L_base: 3.882, L_test: 3.884, gap_train(%): -100.000, update: True
+Epoch: 50, epoch time: 5.405min, tot time: 0.193day, L_train: 3.878, L_base: 3.879, L_test: 3.882, gap_train(%): -100.000, update: True
+Epoch: 51, epoch time: 5.401min, tot time: 0.197day, L_train: 3.890, L_base: 3.889, L_test: 3.882, gap_train(%): -100.000, update: False
+Epoch: 52, epoch time: 5.368min, tot time: 0.200day, L_train: 3.881, L_base: 3.881, L_test: 3.882, gap_train(%): -100.000, update: False
+Epoch: 53, epoch time: 5.333min, tot time: 0.204day, L_train: 3.891, L_base: 3.891, L_test: 3.882, gap_train(%): -100.000, update: False
+Epoch: 54, epoch time: 5.325min, tot time: 0.208day, L_train: 3.879, L_base: 3.883, L_test: 3.880, gap_train(%): -100.000, update: True
+Epoch: 55, epoch time: 5.365min, tot time: 0.211day, L_train: 3.887, L_base: 3.886, L_test: 3.880, gap_train(%): -100.000, update: False
+Epoch: 56, epoch time: 5.363min, tot time: 0.215day, L_train: 3.885, L_base: 3.886, L_test: 3.880, gap_train(%): -100.000, update: False
+Epoch: 57, epoch time: 5.451min, tot time: 0.219day, L_train: 3.882, L_base: 3.883, L_test: 3.880, gap_train(%): -100.000, update: False
+Epoch: 58, epoch time: 5.429min, tot time: 0.223day, L_train: 3.879, L_base: 3.882, L_test: 3.881, gap_train(%): -100.000, update: True
+Epoch: 59, epoch time: 5.456min, tot time: 0.227day, L_train: 3.879, L_base: 3.881, L_test: 3.881, gap_train(%): -100.000, update: True
+Epoch: 60, epoch time: 5.378min, tot time: 0.230day, L_train: 3.886, L_base: 3.885, L_test: 3.881, gap_train(%): -100.000, update: False
+Epoch: 61, epoch time: 5.341min, tot time: 0.234day, L_train: 3.867, L_base: 3.870, L_test: 3.878, gap_train(%): -100.000, update: True
+Epoch: 62, epoch time: 5.341min, tot time: 0.238day, L_train: 3.880, L_base: 3.879, L_test: 3.878, gap_train(%): -100.000, update: False
+Epoch: 63, epoch time: 5.392min, tot time: 0.241day, L_train: 3.880, L_base: 3.880, L_test: 3.878, gap_train(%): -100.000, update: False
+Epoch: 64, epoch time: 5.458min, tot time: 0.245day, L_train: 3.871, L_base: 3.870, L_test: 3.878, gap_train(%): -100.000, update: False
+Epoch: 65, epoch time: 5.457min, tot time: 0.249day, L_train: 3.880, L_base: 3.882, L_test: 3.877, gap_train(%): -100.000, update: True
+Epoch: 66, epoch time: 5.356min, tot time: 0.253day, L_train: 3.886, L_base: 3.884, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 67, epoch time: 5.435min, tot time: 0.257day, L_train: 3.879, L_base: 3.880, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 68, epoch time: 5.457min, tot time: 0.260day, L_train: 3.872, L_base: 3.872, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 69, epoch time: 5.392min, tot time: 0.264day, L_train: 3.871, L_base: 3.872, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 70, epoch time: 5.231min, tot time: 0.268day, L_train: 3.879, L_base: 3.880, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 71, epoch time: 5.338min, tot time: 0.271day, L_train: 3.889, L_base: 3.887, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 72, epoch time: 5.282min, tot time: 0.275day, L_train: 3.866, L_base: 3.868, L_test: 3.877, gap_train(%): -100.000, update: True
+Epoch: 73, epoch time: 5.330min, tot time: 0.279day, L_train: 3.883, L_base: 3.884, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 74, epoch time: 5.336min, tot time: 0.283day, L_train: 3.890, L_base: 3.887, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 75, epoch time: 5.278min, tot time: 0.286day, L_train: 3.883, L_base: 3.882, L_test: 3.877, gap_train(%): -100.000, update: False
+Epoch: 76, epoch time: 5.244min, tot time: 0.290day, L_train: 3.883, L_base: 3.882, L_test: 3.877, gap_train(%): -100.000, update: False
